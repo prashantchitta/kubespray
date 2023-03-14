@@ -85,6 +85,13 @@ spec:
                   path: client.key
                 - key: ca.crt
                   path: hubble-server-ca.crt
+          - secret:
+              name: hubble-server-certs
+              items:
+                - key: tls.crt
+                  path: server.crt
+                - key: tls.key
+                  path: server.key
         name: tls
 ---
 # Source: cilium/templates/hubble-ui/deployment.yaml
